@@ -1,0 +1,26 @@
+[project]
+name = "crash-severity-tabnet-stacking"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "scikit-learn>=1.4",
+    "xgboost>=2.0",
+    "pandas>=2.2",
+    "imbalanced-learn>=0.12",
+    "shap>=0.45",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "torch>=2.2",
+    "pytorch-tabnet>=4.0",
+    "optuna>=3.6",
+    "joblib>=1.3",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+    "ipywidgets>=8.1",
+    "nbconvert>=7.16",
+]
