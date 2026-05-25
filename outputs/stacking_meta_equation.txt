@@ -1,0 +1,18 @@
+================================================================================
+FULL meta-LR equations (inputs are raw base-learner probabilities)
+non-zero terms per class: Slight=9, Serious=9, Fatal=9
+================================================================================
+logit(Slight) = +0.495 +2.657*et.P(Slight) -2.634*xgb.P(Fatal) -1.461*et.P(Fatal) +1.335*xgb.P(Slight) +1.301*xgb.P(Serious) -1.193*et.P(Serious) -0.463*lr.P(Serious) +0.439*lr.P(Slight) +0.026*lr.P(Fatal)
+
+logit(Serious) = +0.950 +4.177*xgb.P(Serious) -3.344*xgb.P(Fatal) +1.815*et.P(Serious) -1.332*et.P(Slight) -0.828*xgb.P(Slight) -0.479*et.P(Fatal) +0.404*lr.P(Slight) -0.371*lr.P(Serious) -0.028*lr.P(Fatal)
+
+logit(Fatal) = -1.445 +5.978*xgb.P(Fatal) -5.478*xgb.P(Serious) +1.940*et.P(Fatal) -1.325*et.P(Slight) -0.843*lr.P(Slight) +0.833*lr.P(Serious) -0.622*et.P(Serious) -0.507*xgb.P(Slight) +0.003*lr.P(Fatal)
+
+================================================================================
+SHORT meta-LR equations - up to top 5 non-zero terms per class
+================================================================================
+logit(Slight) = +0.495 +2.657*et.P(Slight) -2.634*xgb.P(Fatal) -1.461*et.P(Fatal) +1.335*xgb.P(Slight) +1.301*xgb.P(Serious) + ...
+
+logit(Serious) = +0.950 +4.177*xgb.P(Serious) -3.344*xgb.P(Fatal) +1.815*et.P(Serious) -1.332*et.P(Slight) -0.828*xgb.P(Slight) + ...
+
+logit(Fatal) = -1.445 +5.978*xgb.P(Fatal) -5.478*xgb.P(Serious) +1.940*et.P(Fatal) -1.325*et.P(Slight) -0.843*lr.P(Slight) + ...

@@ -1,0 +1,18 @@
+================================================================================
+FULL equations (standardized z-features; zero terms suppressed)
+non-zero terms per class: Slight=2, Serious=1, Fatal=9
+================================================================================
+logit(Slight) = +0.019 +0.188*z[Number_of_vehicles_involved] +0.017*z[Weather_conditions]
+
+logit(Serious) = +0.032 -0.010*z[Vehicle_driver_relation]
+
+logit(Fatal) = -0.051 +0.675*z[Number_of_casualties] -0.261*z[Number_of_vehicles_involved] +0.165*z[IsWeekend] +0.142*z[Area_accident_occured] +0.142*z[Age_band_of_driver_ord] +0.024*z[Lanes_or_Medians] -0.021*z[Light_conditions] +0.016*z[Vehicle_driver_relation] -0.012*z[Weather_conditions]
+
+================================================================================
+SHORT equations - up to top 5 non-zero features per class
+================================================================================
+logit(Slight) = +0.019 +0.188*z[Number_of_vehicles_involved] +0.017*z[Weather_conditions]
+
+logit(Serious) = +0.032 -0.010*z[Vehicle_driver_relation]
+
+logit(Fatal) = -0.051 +0.675*z[Number_of_casualties] -0.261*z[Number_of_vehicles_involved] +0.165*z[IsWeekend] +0.142*z[Area_accident_occured] +0.142*z[Age_band_of_driver_ord] + ...
